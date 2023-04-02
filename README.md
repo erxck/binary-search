@@ -23,15 +23,15 @@ Para fins de desenvolvimento e teste, aconselho que instale em sua máquina o [N
 
 `CTRL` + `ALT` + `N`
 
-## Busca Binária e Busca Linear - O que são?
+## Pesquisa Binária e Pesquisa Linear - O que são?
 
-- A **_busca binária_** é um algoritimo eficiente para encontrar um elemento em uma lista ordenada que contenha um grande número de dados (milhares ou milhões de elementos). O algoritimo funciona dividindo repetidamente a metade da lista de elementos em que o elemento pode estar até que o elemento seja encontrado.
+- A **_Pesquisa binária_** é um algoritimo eficiente para encontrar um elemento em uma lista ordenada que contenha um grande número de dados (milhares ou milhões de elementos). O algoritimo funciona dividindo repetidamente a metade da lista de elementos em que o elemento pode estar até que o elemento seja encontrado.
 
-- A **_busca linear_** é um algoritimo de pesquisa que percorre uma lista sequencialmente, verificando cada elemento da lista até encontrar o elemento desejado ou até chegar ao final da lista.
+- A **_Pesquisa linear_** é um algoritimo de pesquisa que percorre uma lista sequencialmente, verificando cada elemento da lista até encontrar o elemento desejado ou até chegar ao final da lista.
 
 ## Como funciona?
 
-A **_busca binária_** usa logaritimo para determinar quantas etapas serão necessárias para encontrar o elemento desejado, e como dito acima a **_busca linear_** percorre a lista sequencialmente, verificando cada elemento da lista até encontrar o elemento desejado ou até chegar ao final da lista.
+A **_Pesquisa binária_** usa logaritimo para determinar quantas etapas serão necessárias para encontrar o elemento desejado, e como dito acima a **_Pesquisa linear_** percorre a lista sequencialmente, verificando cada elemento da lista até encontrar o elemento desejado ou até chegar ao final da lista.
 
 | **Pesquisa simples** | **Pesquisa binária** |
 | :------------------: | :------------------: |
@@ -51,17 +51,17 @@ A **_busca binária_** usa logaritimo para determinar quantas etapas serão nece
 - **O(n)**: É o tempo de execução Linear.
 - **O(log2(n))**: É o tempo de execução Logaritimo.
 
-Como é usado o logaritimo na **_busca binária_** para determinar quantas etapas serão necessárias para encontrar o elemento desejado?
+Como o logaritimo é usado na **_Pesquisa binária_** para determinar quantas etapas serão necessárias para encontrar o elemento desejado?
 
-- Simples, se você tem uma lista de 100 elementos, então: **log2(128) = 7, pois 2^7 = 128 <-> (7 etapas)**
+- Simples, se você tem uma lista de 100 elementos, então: **log2(128) = 7, pois 2^7 = 128 -> (7 etapas)**
 
   `[128 itens] -> [64] -> [32] -> [16] -> [8] -> [4] -> [2] -> [1]` -> 7 etapas
 
-- Lista de 1.024 elementos: **log2(1.024) = 10, pois 2^10 = 1.024 <-> (10 etapas)**
+- Lista de 1.024 elementos: **log2(1.024) = 10, pois 2^10 = 1.024 -> (10 etapas)**
 
   `[1.024 itens] -> [512] -> [256] -> [128] -> [64] -> [32] -> [16] -> [8] -> [4] -> [2] -> [1]` -> 10 etapas
 
-- Lista de 1.048.576 elementos: **log2(1.048.576) = 20, pois 2^20 = 1.048.576 <-> (20 etapas)**
+- Lista de 1.048.576 elementos: **log2(1.048.576) = 20, pois 2^20 = 1.048.576 -> (20 etapas)**
 
   `[1.048.576 itens] -> [524.288] -> [262.144] -> [131.072] -> [65.536] -> [32.768] -> [16.384] -> [8.192] -> [4.096] -> [2.048] -> [1.024] -> [512] -> [256] -> [128] -> [64] -> [32] -> [16] -> [8] -> [4] -> [2] -> [1]` -> 20 etapas
 
