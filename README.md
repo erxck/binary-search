@@ -19,9 +19,9 @@ E também deixei uma [wordlist](https://github.com/douglasbuzatto/WordLists) com
 2. cd pesquisa-binaria
 ```
 
-- Teste os algoritimos de pesquisa binária e pesquisa linear com os seguintes comandos.
+- Para execultar o código com o [Node.js](https://nodejs.org/en) no terminal do VSCode.
 
-`3. CTRL + ALT + N` para execultar o código com o node.js no terminal do VSCode.
+`CTRL` + `ALT` + `N`
 
 ## Busca Binária e Busca Linear - O que são?
 
@@ -31,7 +31,7 @@ E também deixei uma [wordlist](https://github.com/douglasbuzatto/WordLists) com
 
 ## Como funciona?
 
-A **_busca binária_** usa logaritimos para determinar quantas etapas serão necessárias para encontrar o elemento desejado, e como dito acima a **_busca linear_** percorre a lista sequencialmente, verificando cada elemento da lista até encontrar o elemento desejado ou até chegar ao final da lista.
+A **_busca binária_** usa logaritimo para determinar quantas etapas serão necessárias para encontrar o elemento desejado, e como dito acima a **_busca linear_** percorre a lista sequencialmente, verificando cada elemento da lista até encontrar o elemento desejado ou até chegar ao final da lista.
 
 | **Pesuisa simples** | **Pesquisa binária** |
 | :-----------------: | :------------------: |
@@ -53,14 +53,19 @@ A **_busca binária_** usa logaritimos para determinar quantas etapas serão nec
 
 Como é usado o logaritimo na **_busca binária_** para determinar quantas etapas serão necessárias para encontrar o elemento desejado?
 
-- Simples, se você tem uma lista de 100 elementos, então: **_log2(100) = 7, pois 2^7 = 128 <=> (7 etapas)_**
-  `[100 itens] -> [50] -> [25] -> [13] -> [7] -> [4] -> [2] -> [1]` -> 7 etapas
-- Se você tem uma lista de 1.024 elementos, então: **_log2(1.024) = 10, pois 2^10 = 1.024 <=> (10 etapas)_**
-  `[1.024 itens] -> [512] -> [256] -> [128] -> [64] -> [32] -> [16] -> [8] -> [4] -> [2] -> [1]` -> 10 etapas
-- Se você tem uma lista de 1.048.576 elementos, então: **_log2(1.048.576) = 20, pois 2^20 = 1.048.576 <=> (20 etapas)_**
-  `[1.048.576 itens] -> [524.288] -> [262.144] -> [131.072] -> [65.536] -> [32.768] -> [16.384] -> [8.192] -> [4.096] -> [2.048] -> [1.024] -> [512] -> [256] -> [128] -> [64] -> [32] -> [16] -> [8] -> [4] -> [2] -> [1]` -> 20 etapas
-
 **_log2(n) = x_**, onde **_n_** é o número de elementos da lista e **_x_** é o número de etapas necessárias para encontrar o elemento desejado.
+
+- Simples, se você tem uma lista de 100 elementos, então: **log2(100) = 7, pois 2^7 = 128 <=> (7 etapas)**
+
+  `[100 itens] -> [50] -> [25] -> [13] -> [7] -> [4] -> [2] -> [1]` -> 7 etapas
+
+- Se você tem uma lista de 1.024 elementos, então: **log2(1.024) = 10, pois 2^10 = 1.024 <=> (10 etapas)**
+
+  `[1.024 itens] -> [512] -> [256] -> [128] -> [64] -> [32] -> [16] -> [8] -> [4] -> [2] -> [1]` -> 10 etapas
+
+- Se você tem uma lista de 1.048.576 elementos, então: **log2(1.048.576) = 20, pois 2^20 = 1.048.576 <=> (20 etapas)**
+
+  `[1.048.576 itens] -> [524.288] -> [262.144] -> [131.072] -> [65.536] -> [32.768] -> [16.384] -> [8.192] -> [4.096] -> [2.048] -> [1.024] -> [512] -> [256] -> [128] -> [64] -> [32] -> [16] -> [8] -> [4] -> [2] -> [1]` -> 20 etapas
 
 ## Exemplo
 
@@ -77,12 +82,14 @@ Uma lista de 8 elementos ordenados, só precisará de no máximo 3 etapas para e
 3. Verifica se 5 é igual ao meio da lista (22), se não for, verifica se o 5 é maior
  ou menor que o meio da lista, se for menor, descarta a segunda metade da lista e se
  for maior, descarta a primeira metade da lista.
-4. Lista atual: [2, 5, 9, 22]
+4. Lista atual: [2, 5, 9] -> Sem o número 22, pois ele já foi verificado e não é igual ao 5.
 5. Pega o número do meio da lista: 5
 6. Verifica se 5 é igual ao meio da lista (5), se for, parabéns o número foi encontrado.
 ```
 
-Você deve está perguntando do por quê na **_etapa 2_** pegamos o 22 e não o 34 para definir o meio da lista, e a reposta é simples: Uma lista de 8 elementos começa no índice 0 e vai até o indice 7 (0...7 = 8 elementos), então temos que dividir 7 / 2 que é igual a 3,5, mas como só podemos colocar no índice numeros inteiros, pegamos o menor número inteiro dentre o número "3,5" que é o 3, e o 3 é o índice do número 22 na lista. E o mesmo vale para a **_etapa 5_**.
+- Foi encontrado o número 5 na lista, em apenas 2 etapas.
+
+Você deve está perguntando do por quê pegamos o 22 e não o 34 para definir o meio da lista, e a reposta é simples: Uma lista de 8 elementos começa no índice 0 e vai até o indice 7 (0...7 = 8 elementos), então temos que dividir 7 / 2 que é igual a 3,5, mas como só podemos colocar no índice numeros inteiros, pegamos o menor número inteiro dentre o número "3,5" que é o 3, e o 3 é o índice do número 22 na lista.
 
 ## Manter contato
 
