@@ -68,21 +68,29 @@ Como é usado o logaritimo na **_busca binária_** para determinar quantas etapa
 Se você tem uma lista de **_log2(n)_** elementos ordenados, e você quer encontrar um número que está dentro dessa lista, o algoritimo irá começar dividindo a lista em duas partes e verificar se o número é igual o número do meio da lista, se não for, ele irá verificar se o número é maior ou menor que o número do meio da lista, se for maior, ele irá descartar a primeira metade da lista e se for menor ele irá descartar a segunda metade da lista, e assim por diante até encontrar o número desejado.
 
 `[100 itens] -> [50] -> [25] -> [13] -> [7] -> [4] -> [2] -> [1]` -> 7 etapas
+
 `[1.024 itens] -> [512] -> [256] -> [128] -> [64] -> [32] -> [16] -> [8] -> [4] -> [2] -> [1]` -> 10 etapas
+
 `[1.048.576 itens] -> [524.288] -> [262.144] -> [131.072] -> [65.536] -> [32.768] -> [16.384] -> [8.192] -> [4.096] -> [2.048] -> [1.024] -> [512] -> [256] -> [128] -> [64] -> [32] -> [16] -> [8] -> [4] -> [2] -> [1]` -> 20 etapas
 
 ## Exemplo 2
 
-- Uma lista de 8 elementos ordenados, só precisará de no máximo 3 etapas para encontrar o número desejado.
+Uma lista de 8 elementos ordenados, só precisará de no máximo 3 etapas para encontrar o número desejado.
 
-Uma lista com 8 elementos = [2, 5, 9, 22, 34, 56, 78, 99]
-Número a ser encontrado: 5
+- Uma lista com 8 elementos = [2, 5, 9, 22, 34, 56, 78, 99]
+
+- Número a ser encontrado: 5
 
 1. Dividir a lista em duas partes: [2, 5, 9, 22] e [34, 56, 78, 99]
+
 2. Pega o número do meio da lista: 22
+
 3. Verifica se 5 é igual ao meio da lista (22), se não for, verifica se o 5 é maior ou menor que o meio da lista, se for menor, descarta a segunda metade da lista e se for maior, descarta a primeira metade da lista.
+
 4. Lista atual: [2, 5, 9, 22]
+
 5. Pega o número do meio da lista: 5
+
 6. Verifica se 5 é igual ao meio da lista (5), se for, parabéns o número foi encontrado.
 
 Você deve está perguntando do por quê na **_etapa 2_** pegamos o 22 e não o 34 para definir o meio da lista, e a reposta é simples: Uma lista de 8 elementos começa no índice 0 e vai até o indice 7 [0...7 = 8 elementos], então temos que dividir 7 / 2 que é igual a 3,5, mas como só podemos colocar no índice numeros inteiros, pegamos o menor número inteiro dentre o número "3,5" que é o 3, e o 3 é o índice do número 22 na lista. E o mesmo vale para a **_etapa 5_**.
