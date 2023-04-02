@@ -26,6 +26,7 @@ E também deixei uma [wordlist](https://github.com/douglasbuzatto/WordLists) com
 ## Busca Binária e Busca Linear - O que são?
 
 - A **_busca binária_** é um algoritimo eficiente para encontrar um elemento em uma lista ordenada que contenha um grande número de dados (milhares ou milhões de elementos). O algoritimo funciona dividindo repetidamente a metade da lista de elementos em que o elemento pode estar até que o elemento seja encontrado.
+
 - A **_busca linear_** é um algoritimo de pesquisa que percorre uma lista sequencialmente, verificando cada elemento da lista até encontrar o elemento desejado ou até chegar ao final da lista.
 
 ## Como funciona?
@@ -48,6 +49,7 @@ A **_busca binária_** usa logaritimo para determinar quantas etapas serão nece
 |  :---------------:  |  :----------------:  |
 
 - O(n): É o tempo de execução Linear.
+
 - O(log2(n)): É o tempo de execução Logaritimo.
 
 Como é usado o logaritimo na **_busca binária_** para determinar quantas etapas serão necessárias para encontrar o elemento desejado?
@@ -64,7 +66,7 @@ Como é usado o logaritimo na **_busca binária_** para determinar quantas etapa
 
   `[1.048.576 itens] -> [524.288] -> [262.144] -> [131.072] -> [65.536] -> [32.768] -> [16.384] -> [8.192] -> [4.096] -> [2.048] -> [1.024] -> [512] -> [256] -> [128] -> [64] -> [32] -> [16] -> [8] -> [4] -> [2] -> [1]` -> 20 etapas
 
-  **_log2(n) = x_**, onde **_n_** é o número de elementos da lista e **_x_** é o número de etapas necessárias para encontrar o elemento desejado.
+**_log2(n) = x_**, onde **_n_** é o número de elementos da lista e **_x_** é o número de etapas necessárias para encontrar o elemento desejado.
 
 ## Exemplo
 
