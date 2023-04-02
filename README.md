@@ -53,17 +53,17 @@ A **_Pesquisa binária_** usa logaritimo para determinar quantas etapas serão n
 
 Como o logaritimo é usado na **_Pesquisa binária_** para determinar quantas etapas serão necessárias para encontrar o elemento desejado?
 
-- Simples, se você tem uma lista de 100 elementos, então: **log2(128) = 7, pois 2^7 = 128 -> (7 etapas)**
+- Simples, se você tem uma lista de 100 elementos, então: **log2(128) = 7, pois 2^7 = 128 -> (no máximo 7 etapas)**
 
-  `[128 itens] -> [64] -> [32] -> [16] -> [8] -> [4] -> [2] -> [1]` -> 7 etapas
+  `[128 itens] -> [64] -> [32] -> [16] -> [8] -> [4] -> [2] -> [1]` -> no máximo 7 etapas
 
-- Lista de 1.024 elementos: **log2(1.024) = 10, pois 2^10 = 1.024 -> (10 etapas)**
+- Lista de 1.024 elementos: **log2(1.024) = 10, pois 2^10 = 1.024 -> (no máximo 10 etapas)**
 
-  `[1.024 itens] -> [512] -> [256] -> [128] -> [64] -> [32] -> [16] -> [8] -> [4] -> [2] -> [1]` -> 10 etapas
+  `[1.024 itens] -> [512] -> [256] -> [128] -> [64] -> [32] -> [16] -> [8] -> [4] -> [2] -> [1]` -> no máximo 10 etapas
 
-- Lista de 1.048.576 elementos: **log2(1.048.576) = 20, pois 2^20 = 1.048.576 -> (20 etapas)**
+- Lista de 1.048.576 elementos: **log2(1.048.576) = 20, pois 2^20 = 1.048.576 -> (no máximo 20 etapas)**
 
-  `[1.048.576 itens] -> [524.288] -> [262.144] -> [131.072] -> [65.536] -> [32.768] -> [16.384] -> [8.192] -> [4.096] -> [2.048] -> [1.024] -> [512] -> [256] -> [128] -> [64] -> [32] -> [16] -> [8] -> [4] -> [2] -> [1]` -> 20 etapas
+  `[1.048.576 itens] -> [524.288] -> [262.144] -> [131.072] -> [65.536] -> [32.768] -> [16.384] -> [8.192] -> [4.096] -> [2.048] -> [1.024] -> [512] -> [256] -> [128] -> [64] -> [32] -> [16] -> [8] -> [4] -> [2] -> [1]` -> no máximo 20 etapas
 
 **_log2(n) = x_**, onde **_n_** é o número de elementos da lista e **_x_** é o número de etapas necessárias para encontrar o elemento desejado.
 

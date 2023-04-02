@@ -10,13 +10,8 @@ fs.readFile(caminho, "utf-8", (err, conteudo) => {
   linhas.filter((item, index) => {
     cont++;
 
-    if (item === "blessed") {
-      console.log(index + " => " + "blessed");
-    }
-
-    if (item === "ruel") {
-      console.log(index + " => " + "ruel");
-    }
+    if (item === "blessed") console.log(index + " => " + "blessed");
+    if (item === "ruel") console.log(index + " => " + "ruel");
   });
 
   console.log("Etapas: " + cont);
