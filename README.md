@@ -8,7 +8,7 @@ O código está comentado para que você possa entender melhor como funciona a *
 
 E também deixei uma [wordlist](https://github.com/douglasbuzatto/WordLists) com 53072 palavras para que você possa testar o algoritimo.
 
-- Para fins de desenvolvimento e teste, aconselho que instale em sua máquina o [Node.js](https://nodejs.org/en).
+Para fins de desenvolvimento e teste, aconselho que instale em sua máquina o [Node.js](https://nodejs.org/en).
 
 ## Como instalar
 
@@ -33,36 +33,35 @@ E também deixei uma [wordlist](https://github.com/douglasbuzatto/WordLists) com
 
 A **_busca binária_** usa logaritimo para determinar quantas etapas serão necessárias para encontrar o elemento desejado, e como dito acima a **_busca linear_** percorre a lista sequencialmente, verificando cada elemento da lista até encontrar o elemento desejado ou até chegar ao final da lista.
 
-| **Pesuisa simples** | **Pesquisa binária** |
-| :-----------------: | :------------------: |
-|      100 itens      |      100 itens       |
-|          ↓          |          ↓           |
-|    100 palpites     |      7 palpites      |
-|  :--------------:   |  :----------------:  |
-|      1.048.576      |      1.048.576       |
-|        itens        |        itens         |
-|          ↓          |          ↓           |
-|      1.048.576      |     20 palpites      |
-|      palpites       |                      |
-|  :--------------:   |  :----------------:  |
-|        O(n)         |      O(log2(n))      |
-|  :---------------:  |  :----------------:  |
+| **Pesquisa simples** | **Pesquisa binária** |
+| :------------------: | :------------------: |
+|      128 itens       |      128 itens       |
+|          ↓           |          ↓           |
+|     128 palpites     |      7 palpites      |
+|   :--------------:   |  :----------------:  |
+|      1.048.576       |      1.048.576       |
+|        itens         |        itens         |
+|          ↓           |          ↓           |
+|      1.048.576       |     20 palpites      |
+|       palpites       |                      |
+|   :--------------:   |  :----------------:  |
+|         O(n)         |      O(log2(n))      |
+|  :---------------:   |  :----------------:  |
 
-- O(n): É o tempo de execução Linear.
-
-- O(log2(n)): É o tempo de execução Logaritimo.
+- **O(n)**: É o tempo de execução Linear.
+- **O(log2(n))**: É o tempo de execução Logaritimo.
 
 Como é usado o logaritimo na **_busca binária_** para determinar quantas etapas serão necessárias para encontrar o elemento desejado?
 
-- Simples, se você tem uma lista de 100 elementos, então: **log2(100) = 7, pois 2^7 = 128 <=> (7 etapas)**
+- Simples, se você tem uma lista de 100 elementos, então: **log2(128) = 7, pois 2^7 = 128 <-> (7 etapas)**
 
-  `[100 itens] -> [50] -> [25] -> [13] -> [7] -> [4] -> [2] -> [1]` -> 7 etapas
+  `[128 itens] -> [64] -> [32] -> [16] -> [8] -> [4] -> [2] -> [1]` -> 7 etapas
 
-- Lista de 1.024 elementos: **log2(1.024) = 10, pois 2^10 = 1.024 <=> (10 etapas)**
+- Lista de 1.024 elementos: **log2(1.024) = 10, pois 2^10 = 1.024 <-> (10 etapas)**
 
   `[1.024 itens] -> [512] -> [256] -> [128] -> [64] -> [32] -> [16] -> [8] -> [4] -> [2] -> [1]` -> 10 etapas
 
-- Lista de 1.048.576 elementos: **log2(1.048.576) = 20, pois 2^20 = 1.048.576 <=> (20 etapas)**
+- Lista de 1.048.576 elementos: **log2(1.048.576) = 20, pois 2^20 = 1.048.576 <-> (20 etapas)**
 
   `[1.048.576 itens] -> [524.288] -> [262.144] -> [131.072] -> [65.536] -> [32.768] -> [16.384] -> [8.192] -> [4.096] -> [2.048] -> [1.024] -> [512] -> [256] -> [128] -> [64] -> [32] -> [16] -> [8] -> [4] -> [2] -> [1]` -> 20 etapas
 
@@ -88,7 +87,7 @@ Uma lista de 8 elementos ordenados, só precisará de no máximo 3 etapas para e
 6. Verifica se 5 é igual ao meio da lista (5), se for, parabéns o número foi encontrado.
 ```
 
-- Foi encontrado o número 5 na lista, em apenas 2 etapas.
+- Foi encontrado o número 5 na lista em apenas 2 etapas.
 
 Você deve está perguntando do por quê pegamos o 22 e não o 34 para definir o meio da lista, e a reposta é simples: Uma lista de 8 elementos começa no índice 0 e vai até o indice 7 (0...7 = 8 elementos), então temos que dividir 7 / 2 que é igual a 3,5, mas como só podemos colocar no índice numeros inteiros, pegamos o menor número inteiro dentre o número "3,5" que é o 3, e o 3 é o índice do número 22 na lista.
 
