@@ -1,5 +1,5 @@
 const fs = require("fs");
-const caminho = __dirname + "/WordLists/all-words.txt";
+const caminho = __dirname + "/wordList.txt";
 
 fs.readFile(caminho, "utf-8", (err, conteudo) => {
   const linhas = conteudo.split("\r\n");
