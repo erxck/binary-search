@@ -25,33 +25,33 @@ Para fins de desenvolvimento e teste, aconselho que instale em sua máquina o [N
 
 ## Pesquisa Binária e Pesquisa Linear - O que são?
 
-- A **_Pesquisa binária_** é um algoritimo eficiente para encontrar um elemento em uma lista ordenada que contenha um grande número de dados (milhares ou milhões de elementos). O algoritimo funciona dividindo repetidamente a metade da lista de elementos em que o elemento pode estar até que o elemento seja encontrado.
+- A **_pesquisa binária_** é um algoritimo eficiente para encontrar um elemento em uma lista ordenada que contenha um grande número de dados (milhares ou milhões de elementos). O algoritimo funciona dividindo repetidamente a metade da lista de elementos em que o elemento pode estar até que o elemento seja encontrado.
 
-- A **_Pesquisa linear_** é um algoritimo de pesquisa que percorre uma lista sequencialmente, verificando cada elemento da lista até encontrar o elemento desejado ou até chegar ao final da lista.
+- A **_pesquisa linear_** é um algoritimo de pesquisa que percorre uma lista sequencialmente, verificando cada elemento da lista até encontrar o elemento desejado ou até chegar ao final da lista.
 
 ## Como funciona?
 
-A **_Pesquisa binária_** usa logaritimo para determinar quantas etapas serão necessárias para encontrar o elemento desejado, e como dito acima a **_Pesquisa linear_** percorre a lista sequencialmente, verificando cada elemento da lista até encontrar o elemento desejado ou até chegar ao final da lista.
+A **_pesquisa binária_** usa logaritimo para determinar quantas etapas serão necessárias para encontrar o elemento desejado, e como dito acima a **_pesquisa linear_** percorre a lista sequencialmente, verificando cada elemento da lista até encontrar o elemento desejado ou até chegar ao final da lista.
 
-| **Pesquisa simples** | **Pesquisa binária** |
-| :------------------: | :------------------: |
-|      128 itens       |      128 itens       |
-|          ↓           |          ↓           |
-|     128 palpites     |      7 palpites      |
-|   :--------------:   |  :----------------:  |
-|      1.048.576       |      1.048.576       |
-|        itens         |        itens         |
-|          ↓           |          ↓           |
-|      1.048.576       |     20 palpites      |
-|       palpites       |                      |
-|   :--------------:   |  :----------------:  |
-|         O(n)         |      O(log2(n))      |
-|  :---------------:   |  :----------------:  |
+| **Pesquisa linear** | **Pesquisa binária** |
+| :-----------------: | :------------------: |
+|      128 itens      |      128 itens       |
+|          ↓          |          ↓           |
+|    128 palpites     |      7 palpites      |
+|  :--------------:   |  :----------------:  |
+|      1.048.576      |      1.048.576       |
+|        itens        |        itens         |
+|          ↓          |          ↓           |
+|      1.048.576      |     20 palpites      |
+|      palpites       |                      |
+|  :--------------:   |  :----------------:  |
+|        O(n)         |      O(log2(n))      |
+|  :---------------:  |  :----------------:  |
 
 - **O(n)**: É o tempo de execução Linear.
 - **O(log2(n))**: É o tempo de execução Logaritimo.
 
-Como o logaritimo é usado na **_Pesquisa binária_** para determinar quantas etapas serão necessárias para encontrar o elemento desejado?
+Como o logaritimo é usado na **_pesquisa binária_** para determinar quantas etapas serão necessárias para encontrar o elemento desejado?
 
 - Simples, se você tem uma lista de 100 elementos, então: **log2(128) = 7, pois 2^7 = 128 -> (no máximo 7 etapas)**
 

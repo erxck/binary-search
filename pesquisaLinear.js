@@ -7,12 +7,15 @@ fs.readFile(caminho, "utf-8", (err, conteudo) => {
 
   console.log("Tamanho da lista: " + linhas.length);
 
-  linhas.filter((item, index) => {
-    cont++;
+  const pesquisa_linear = (lista, pesquisa) => {
+    for (let i = 0; i < lista.length; i++) {
+      if (lista[i] === pesquisa) return i + " => " + lista[i];
+      cont++;
+    }
 
-    if (item === "blessed") console.log(index + " => " + "blessed");
-    if (item === "ruel") console.log(index + " => " + "ruel");
-  });
+    return "Item não encontrado";
+  };
 
+  console.log(pesquisa_linear(linhas, "ruel"));
   console.log("Etapas: " + cont);
 });
