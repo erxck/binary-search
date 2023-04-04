@@ -53,7 +53,7 @@ A **_pesquisa binária_** usa logaritimo para determinar quantas etapas serão n
 
 Como o logaritimo é usado na **_pesquisa binária_** para determinar quantas etapas serão necessárias para encontrar o elemento desejado?
 
-- Simples, se você tem uma lista de 100 elementos, então: **log2(128) = 7, pois 2^7 = 128 -> (no máximo 7 etapas)**
+- Se você tem uma lista de 128 elementos, então: **log2(128) = 7, pois 2^7 = 128 -> (no máximo 7 etapas)**
 
   `[128 itens] -> [64] -> [32] -> [16] -> [8] -> [4] -> [2] -> [1]` -> no máximo 7 etapas
 
@@ -89,7 +89,7 @@ Uma lista de 8 elementos ordenados, só precisará de no máximo 3 etapas para e
 
 - Foi encontrado o número 5 na lista em apenas 2 etapas.
 
-Você deve está perguntando do por quê pegamos o 22 e não o 34 para definir o meio da lista, e a reposta é simples: Uma lista de 8 elementos começa no índice 0 e vai até o indice 7 (0...7 = 8 elementos), então temos que dividir 7 / 2 que é igual a 3,5, mas como só podemos colocar no índice numeros inteiros, pegamos o menor número inteiro dentre o número "3,5" que é o 3, e o 3 é o índice do número 22 na lista.
+Você deve está perguntando do por quê pegamos o 22 e não o 34 para definir o meio da lista, e a reposta é simples: Uma lista de 8 elementos começa no índice 0 e vai até o indice 7 (0...7 = 8 elementos), então temos que dividir 7 / 2 que é igual a 3,5, mas como só podemos colocar no índice números inteiros, pegamos o menor número inteiro dentre o número "3,5" que é o 3, e o 3 é o índice do número 22 na lista.
 
 ## Manter contato
 
