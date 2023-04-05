@@ -1,6 +1,6 @@
 # Pesquisa Binária e Pesquisa Linear
 
-> O objetivo desse projeto é comparar os algoritmos de pesquisa binária e pesquisa linear.
+> Explorando as diferenças entre pesquisa binária e pesquisa linear: uma análise comparativa dos algoritmos de busca mais populares
 
 ## Introdução
 
