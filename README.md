@@ -4,7 +4,7 @@
 
 ## Introdução
 
-Este é o código-fonte do artigo [Pesquisa Binária e Pesquisa Linear](https://erickrian.com/blog/pesquisa-binaria-e-pesquisa-linear), publicado no meu blog pessoal.
+Este é o código-fonte do artigo [Pesquisa Binária e Pesquisa Linear](https://erickrian.com/blog/binary-search), publicado no meu blog pessoal.
 
 O código está comentado para que você possa entender melhor como funciona a **_pesquisa binária_**.
 
