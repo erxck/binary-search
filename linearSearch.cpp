@@ -10,13 +10,11 @@ int main(void)
 
     // if the target is found in the list
     if (linearSearch(myList, target) != -1)
-    {
         std::cout << "Target found at index: " << linearSearch(myList, target) << std::endl;
-    }
     else
-    {
         std::cout << "Target not found in list" << std::endl;
-    }
+
+    return 0;
 }
 
 int linearSearch(std::vector<int> list, int item)
