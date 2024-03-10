@@ -17,9 +17,14 @@ O código está comentado para que você possa entender melhor como funciona a *
 2. cd binary-search
 ```
 
-- Para execultar o código com o [Node.js](https://nodejs.org/en) no terminal do VSCode.
+## Como usar
 
-`CTRL` + `ALT` + `N`
+- Para utilizar o projeto, siga as instruções abaixo.
+
+```
+1. gcc -Wall -Wextra -o <name_of_the_file> name_of_the_file.cpp
+2. ./<name_of_the_file>
+```
 
 ## Manter contato
 
